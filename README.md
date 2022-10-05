@@ -1,5 +1,5 @@
-# .NET 5 Console Application - Starting Template
-**A starter project for .NET 5 Console application. Supported features include:**
+# .NET 6 Console Application - Starting Template
+**A starter project for .NET 6 Console application. Supported features include:**
 * Dependency Injection
 * Asynchronous programming
 * Structured logging using Serilog
