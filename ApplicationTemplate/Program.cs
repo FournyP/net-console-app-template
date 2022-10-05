@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace ApplicationTemplate
 {
@@ -19,7 +20,7 @@ namespace ApplicationTemplate
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             try
             {
@@ -46,7 +47,7 @@ namespace ApplicationTemplate
                 var serviceProvider = services.BuildServiceProvider();
 
                 // Kick off the actual application
-                serviceProvider.GetService<App>().Run();
+                await serviceProvider.GetService<App>().Run();
 
                 Log.Information("Shutting down...");
             }
